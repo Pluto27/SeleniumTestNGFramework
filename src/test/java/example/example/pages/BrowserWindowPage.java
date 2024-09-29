@@ -24,6 +24,7 @@ public class BrowserWindowPage extends BasePage{
             // Set up WebDriver (e.g., ChromeDriver)
           public void testWindows(){
               System.out.println("First tab title: " + driver.getTitle());
+              System.out.println("Pranjal Sexy");
 
               // Store the current window handle (first tab)
               String originalWindow = driver.getWindowHandle();
