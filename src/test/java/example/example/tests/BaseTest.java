@@ -73,6 +73,7 @@ public class BaseTest {
 		System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
 		//WebDriverManager.chromedriver().setup();
 		ChromeOptions ops = new ChromeOptions();
+		ops.addArguments("--start-maximized");
 		ops.addArguments("disable-infobars");
 		driver = new ChromeDriver(ops);
 		driver.manage().window().maximize();
