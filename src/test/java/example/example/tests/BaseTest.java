@@ -2,9 +2,14 @@ package example.example.tests;
 
 import java.util.concurrent.TimeUnit;
 
+import example.example.context.Constants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
@@ -65,8 +70,8 @@ public class BaseTest {
 	 */
 	@BeforeClass
 	protected void setup() {
-//		System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
-		WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
+		//WebDriverManager.chromedriver().setup();
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("disable-infobars");
 		driver = new ChromeDriver(ops);

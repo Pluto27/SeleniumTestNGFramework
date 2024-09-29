@@ -29,6 +29,7 @@ public class BasePage {
 	public BasePage(WebDriver driver) {
 		super();
 		this.driver = driver;
+		driver.switchTo().defaultContent();
 		PageFactory.initElements(driver, this);
 		waiter = new FluentWait<WebDriver>(driver).ignoring(NoSuchElementException.class, WebDriverException.class)
 				.withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(2));

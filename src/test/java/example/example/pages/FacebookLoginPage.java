@@ -1,5 +1,6 @@
 package example.example.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,9 +13,10 @@ import org.openqa.selenium.support.FindBy;
 public class FacebookLoginPage extends BasePage {
 
 	/** The email input. */
-	@FindBy(id = "email")
+	@FindBy(xpath = "//*[@id='email']")
 	private WebElement emailInput;
 
+//input[@id='pass']
 	/** The pass. */
 	@FindBy(id = "pass")
 	private WebElement pass;

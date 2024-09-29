@@ -24,6 +24,7 @@ public class TestProperties {
 			FileInputStream Locator;
 			Locator = new FileInputStream(Constants.PROPERTY_FILE_PATH);
 			props.load(Locator);
+			//props.put("mail.from","priyankasisodia2gmail.com")
 		} catch (IOException e) {
 			LoggerUtil.getLogger().fatal("Could not load properties : " + e.getMessage());
 		}

@@ -1,5 +1,7 @@
 package example.example.tests;
 
+import example.example.util.LoggerUtil;
+import org.apache.log4j.spi.LoggerRepository;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -20,6 +22,7 @@ public class GoogleSearchTest extends BaseTest {
 	@Test
 	public void googleSearchTest() {
 		driver.get("https://www.google.co.in/");
+		LoggerUtil.getLogger().info("google url searched");
 		GooglePage googlePage = PageinstancesFactory.getInstance(GooglePage.class);
 		googlePage.searchText("abc");
 		Assert.assertTrue(driver.getTitle().contains("abc"), "Title doesn't contain abc : Test Failed");
